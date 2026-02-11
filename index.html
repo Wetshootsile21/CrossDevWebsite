@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CrossDev | Premium Web Development</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: radial-gradient(circle at top left, #0f172a, #020617);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ================= NAVIGATION ================= */
+
+header {
+    position: fixed;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0f172a; /* fully solid */
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #38bdf8, #6366f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 14px;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #38bdf8;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #38bdf8, #6366f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 600px;
+    color: #cbd5e1;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 14px 35px;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #38bdf8, #6366f1);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.5);
+}
+
+/* ================= SECTIONS ================= */
+
+section {
+    padding: 120px 10%;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s ease;
+}
+
+section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 60px;
+    font-weight: 700;
+}
+
+/* ================= PROJECTS ================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    position: relative;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    text-align: left;
+    transition: background 0.3s;
+}
+
+.project-overlay h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.project-overlay p {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.project-overlay .btn {
+    padding: 10px 25px;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #38bdf8, #6366f1);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.project-overlay .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.5);
+}
+
+.project-card.coming-soon {
+    background: rgba(15, 23, 42, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card.coming-soon .project-overlay {
+    background: transparent;
+    text-align: center;
+}
+
+/* ================= SERVICES ================= */
+
+.service-card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.service-content {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.service-content h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.service-content p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    color: #e0e0e0;
+}
+
+.service-content .price {
+    font-size: 20px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #38bdf8, #6366f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.service-content .btn {
+    padding: 12px 30px;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #38bdf8, #6366f1);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.service-content .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.6), 0 0 20px rgba(56, 189, 248, 0.5);
+}
+
+.service-card:hover .service-content {
+    transform: translateY(-10px);
+    transition: transform 0.3s;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #94a3b8;
+    background: #020617;
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    padding: 18px;
+    border-radius: 50%;
+    font-size: 22px;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+/* ================= HAMBURGER & MOBILE MENU ================= */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1100;
+    transition: 0.3s;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+#nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        position: fixed; /* ensures it stays visible */
+        top: 25px;
+        right: 30px;
+    }
+
+    #nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100%;
+        width: 70%;
+        background: #0f172a; /* fully solid */
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 80px 30px;
+        gap: 30px;
+        transition: right 0.3s ease;
+        z-index: 2000;
+        backdrop-filter: none;
+    }
+
+    #nav-menu a {
+        font-size: 18px;
+        margin: 0;
+    }
+}
+
+/* Show menu when active */
+#nav-menu.active {
+    right: 0;
+}
+
+/* ================= RESPONSIVE ADJUSTMENTS ================= */
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav a {
+        margin-left: 15px;
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 16px;
+        max-width: 90%;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    section {
+        padding: 80px 5%;
+    }
+
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-card,
+    .service-card {
+        height: auto;
+        min-height: 300px;
+    }
+
+    .service-card {
+        padding: 20px;
+    }
+
+    .service-content h3 {
+        font-size: 20px;
+    }
+
+    .service-content p {
+        font-size: 13px;
+    }
+
+    .service-content .price {
+        font-size: 18px;
+    }
+
+    .project-overlay h3 {
+        font-size: 20px;
+    }
+
+    .project-overlay p {
+        font-size: 13px;
+    }
+
+    .project-overlay .btn {
+        padding: 8px 20px;
+        font-size: 13px;
+    }
+
+    .service-content .btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    nav a {
+        margin-left: 10px;
+        font-size: 11px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .btn,
+    .service-content .btn,
+    .project-overlay .btn {
+        padding: 8px 18px;
+        font-size: 12px;
+    }
+
+    .service-content h3,
+    .project-overlay h3 {
+        font-size: 18px;
+    }
+
+    .service-content p,
+    .project-overlay p {
+        font-size: 12px;
+    }
+
+    .service-content .price {
+        font-size: 16px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <div class="logo">CrossDev</div>
+
+    <!-- Hamburger icon -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav id="nav-menu">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h1>Building Premium Digital Experiences</h1>
+    <p>I design and develop high-performance websites that elevate businesses and create powerful online presence.</p>
+    <a href="#projects" class="btn">View My Work</a>
+</div>
+
+<section id="about">
+    <h2 class="section-title">About CrossDev</h2>
+
+    <div style="max-width:900px; margin:auto; text-align:center;">
+
+        <p style="color:#cbd5e1; font-size:18px; margin-bottom:25px;">
+            CrossDev is a modern web development brand founded by Taolo Wetshootsile,
+            focused on delivering premium digital solutions for businesses that
+            want to stand out in a competitive market.
+        </p>
+
+        <p style="color:#94a3b8; font-size:16px; margin-bottom:25px;">
+            We specialize in building fast, responsive, and visually refined websites
+            that not only look professional — but are structured strategically to
+            build credibility, attract clients, and drive business growth.
+        </p>
+
+        <p style="color:#94a3b8; font-size:16px; margin-bottom:40px;">
+            From security companies to service-based businesses, CrossDev works closely
+            with clients to transform ideas into powerful online platforms that reflect
+            their brand identity and operational strength.
+        </p>
+
+        <div style="display:flex; justify-content:center; gap:40px; flex-wrap:wrap; margin-top:40px;">
+
+            <div>
+                <h3 style="font-size:32px; font-weight:700; background:linear-gradient(90deg,#38bdf8,#6366f1); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
+                    100%
+                </h3>
+                <p style="color:#94a3b8;">Client Satisfaction Focus</p>
+            </div>
+
+            <div>
+                <h3 style="font-size:32px; font-weight:700; background:linear-gradient(90deg,#38bdf8,#6366f1); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
+                    24/7
+                </h3>
+                <p style="color:#94a3b8;">Professional Support</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section id="projects">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="grid">
+
+        <!-- VIPRE Security Project -->
+        <div class="project-card" style="background-image: url('https://scontent-jnb2-1.xx.fbcdn.net/v/t1.6435-9/70221744_870206673487776_5715964720599531520_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=-reTR648PQ4Q7kNvwG34HAa&_nc_oc=AdlHN_mAikr8Av_EWMnBlIhmV1SWnP5wCgpRq4EAeVL6DADyMFPGu9AEiO0rTJbx3_c&_nc_zt=23&_nc_ht=scontent-jnb2-1.xx&_nc_gid=8PPxzYbKR-gg_KBIVazHQg&oh=00_AftEFUEQC13zSlmEKotg997cuBp3gZJQxk6ZiVpxx_MPCA&oe=69B3B4A0');">
+            <div class="project-overlay">
+                <h3>VIPRE SECURITY BW</h3>
+                <p>Full website for a security company including contact forms and service showcase.</p>
+                <a href="https://wetshootsile21.github.io/VipreSecurity/" target="_blank" class="btn">View Project →</a>
+            </div>
+        </div>
+
+        <!-- Placeholder Project Cards -->
+        <div class="project-card coming-soon">
+            <div class="project-overlay">
+                <h3>Coming Soon</h3>
+                <p>More projects will be showcased here soon.</p>
+            </div>
+        </div>
+
+        <div class="project-card coming-soon">
+            <div class="project-overlay">
+                <h3>Coming Soon</h3>
+                <p>More projects will be showcased here soon.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section id="services">
+    <h2 class="section-title">Services & Packages</h2>
+    <div class="grid">
+
+        <!-- 1. Simple Static Website -->
+        <div class="service-card" style="background-image: url('https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=800&q=80');">
+            <div class="service-content">
+                <h3>Simple Static Website</h3>
+                <p>- Fixed Content<br>- Basic Navigation<br>- Fast Loading<br>- Cost-effective<br>- Informational</p>
+                <div class="price">P5,000</div>
+                <a href="#contact" class="btn">Learn More →</a>
+            </div>
+        </div>
+
+        <!-- 2. Dynamic Website -->
+        <div class="service-card" style="background-image: url('https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=1605&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+            <div class="service-content">
+                <h3>Dynamic Website</h3>
+                <p>- Management System<br>- Database Integration<br>- Interactive Forms<br>- E-Commerce Integration<br>- Search Functionality</p>
+                <div class="price">P10,000</div>
+                <a href="#contact" class="btn">Learn More →</a>
+            </div>
+        </div>
+
+        <!-- 3. E-Commerce Website -->
+        <div class="service-card" style="background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80');">
+            <div class="service-content">
+                <h3>E-Commerce Website</h3>
+                <p>- Product Catalog<br>- Payment Gateway<br>- User Reviews & Ratings<br>- Inventory<br>- Order Tracking</p>
+                <div class="price">P15,000</div>
+                <a href="#contact" class="btn">Learn More →</a>
+            </div>
+        </div>
+
+        <!-- 4. Custom Web Application -->
+        <div class="service-card" style="background-image: url('https://images.unsplash.com/photo-1745674684468-b9fc392fda3f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+            <div class="service-content">
+                <h3>Custom Web Application</h3>
+                <p>- Tailor Made<br>- Scalability<br>- Role-Based Access<br>- API Integration<br>- AI Integration</p>
+                <div class="price">P15,000 – P30,000</div>
+                <a href="#contact" class="btn">Learn More →</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+<section id="contact">
+    <h2 class="section-title">Let’s Work Together</h2>
+    <p style="text-align:center;color:#cbd5e1;">
+        Email: <a href="mailto:twetshootsile21@gmail.com" style="color:#38bdf8; text-decoration:none;">twetshootsile21@gmail.com</a> <br><br>
+        WhatsApp: <a href="https://wa.me/26774534094" target="_blank" style="color:#25D366; text-decoration:none;">+267 74534094</a>
+        Call: <a href="tel:+73 602 034" style="color:#38bdf8; text-decoration:none;">+267 73 602 034</a>
+
+    </p>
+</section>
+
+<footer>
+    © 2026 CrossDev. All rights reserved.
+</footer>
+
+<a href="https://wa.me/2677" class="whatsapp-btn" target="_blank">💬</a>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100){
+            section.classList.add("active");
+        }
+    });
+});
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
+
+hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    hamburger.classList.toggle("active"); // animate hamburger into X
+});
+
+// Close menu when a link is clicked (mobile UX)
+document.querySelectorAll("#nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+        hamburger.classList.remove("active");
+    });
+});
+
+
+</script>
+
+</body>
+</html>
