@@ -254,3 +254,50 @@ footer p{color:var(--muted2);font-size:13px;}
   body{cursor:auto;}
   .cursor,.cursor-ring{display:none;}
 }
+/* HERO STATS BAR */
+.hero-stats-bar {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 2.5rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 1.2rem 2rem;
+  width: fit-content;
+  flex-wrap: wrap;
+  gap: 0;
+}
+.hero-stat {
+  text-align: center;
+  padding: 0 1.5rem;
+}
+.hero-stat-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1;
+}
+.hero-stat-label {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+  margin-top: 0.3rem;
+  white-space: nowrap;
+}
+.hero-stat-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255,255,255,0.15);
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .hero-stats-bar {
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+  .hero-stat { padding: 0 0.75rem; }
+  .hero-stat-num { font-size: 1.4rem; }
+  .hero-stat-divider { height: 30px; }
+}
