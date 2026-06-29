@@ -276,19 +276,19 @@ footer p{color:var(--muted2);font-size:13px;}
   font-family: 'Syne', sans-serif;
   font-size: 1.8rem;
   font-weight: 800;
-  color: white;
+  color:var(--accent);
   line-height: 1;
 }
 .hero-stat-label {
   font-size: 0.75rem;
-  color: rgba(255,255,255,0.5);
+  color: var(--accent);
   margin-top: 0.3rem;
   white-space: nowrap;
 }
 .hero-stat-divider {
   width: 1px;
   height: 40px;
-  background: rgba(255,255,255,0.15);
+  background: rgba(139,94,60,0.25);
   flex-shrink: 0;
 }
 
