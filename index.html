@@ -1,126 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CrossDev | Taolo Wetshootsile – Web & App Developer, Botswana</title>
-<meta name="description" content="CrossDev by Taolo Wetshootsile – Premium web and app development based in Gaborone, Botswana.">
-<meta property="og:title" content="CrossDev | Premium Web Development – Botswana">
-<meta property="og:description" content="Fast, modern websites and apps built for Botswana businesses. Based in Gaborone.">
-<meta property="og:type" content="website">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CrossDev | Taolo Wetshootsile – Web & App Developer, Botswana</title>
+  <meta name="description" content="CrossDev by Taolo Wetshootsile – Premium web and app development based in Gaborone, Botswana.">
+  <meta property="og:title" content="CrossDev | Premium Web Development – Botswana">
+  <meta property="og:description" content="Fast, modern websites and apps built for Botswana businesses. Based in Gaborone.">
+  <meta property="og:type" content="website">
 
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-
-<!-- Dim overlay: tapping this closes the drawer -->
-<div class="mob-overlay" id="mobOverlay"></div>
-
-<!-- Slide-in drawer -->
-<div class="mob-drawer" id="mobDrawer">
-  <a href="#about"    id="lnk1">About</a>
-  <a href="#projects" id="lnk2">Projects</a>
-  <a href="#process"  id="lnk3">Process</a>
-  <a href="#services" id="lnk4">Services</a>
-  <a href="#contact"  id="lnk5" class="mob-cta">Hire Me →</a>
-</div>
-
-<!-- Header -->
 <header>
   <div class="logo">Cross<span>Dev</span></div>
-
-  <!-- Hamburger -->
-  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-    <span></span><span></span><span></span>
-  </button>
-
-  <!-- Desktop nav -->
   <nav class="desk-nav">
     <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#process">Process</a>
+    <a href="#projects">Works</a>
     <a href="#services">Services</a>
     <a href="#contact" class="nav-cta">Hire Me →</a>
   </nav>
 </header>
 
-<!-- Hero -->
-<div class="hero">
-  <div class="hero-label">Available for work · Gaborone, Botswana</div>
-  <h1>Building Digital<br>Products that <span class="grad">Actually Work</span></h1>
-  <p>I'm Taolo — a developer based in Gaborone building high-performance websites and apps for businesses that want to stand out.</p>
-  <div class="hero-actions">
-    <a href="#projects" class="btn-primary">See My Work →</a>
-    <a href="#contact"  class="btn-secondary">Let's Talk</a>
-  </div>
-  <div class="hero-stats-bar">
-    <div class="hero-stat"><div class="hero-stat-num">3+</div><div class="hero-stat-label">Clients Served</div></div>
-    <div class="hero-stat-divider"></div>
-    <div class="hero-stat"><div class="hero-stat-num">5+</div><div class="hero-stat-label">Projects Delivered</div></div>
-    <div class="hero-stat-divider"></div>
-    <div class="hero-stat"><div class="hero-stat-num">24hr</div><div class="hero-stat-label">Response Time</div></div>
-    <div class="hero-stat-divider"></div>
-    <div class="hero-stat"><div class="hero-stat-num">100%</div><div class="hero-stat-label">Built in Botswana</div></div>
-  </div>
-  <div class="scroll-hint"><div class="scroll-line"></div>Scroll to explore</div>
-</div>
-
-<!-- About -->
-<section id="about">
-  <div class="about-grid reveal">
-    <div class="about-photo-wrap">
-      <img src="images/Profile Pic.jpeg" alt="Taolo Wetshootsile" class="about-photo"
-           onerror="this.style.display='none'">
-      <div class="about-badge">
-        <div class="badge-num">2+</div>
-        <div class="badge-label">Years Experience</div>
+<main class="hero-section" id="about">
+  <div class="bento-hero-grid">
+    
+    <!-- LEFT SIDE PROFILE CARD -->
+    <div class="profile-card">
+      <div class="profile-img-wrap">
+        <img src="images/Profile Pic.jpeg" alt="Taolo Wetshootsile" onerror="this.src='https://via.placeholder.com/180'">
+      </div>
+      <h2 class="profile-name">Taolo Wetshootsile</h2>
+      <p class="profile-title">Web & App Developer based in Gaborone, Botswana</p>
+      
+      <div class="social-links">
+        <a href="mailto:twetshootsile21@gmail.com" class="social-btn" title="Email">✉</a>
+        <a href="https://wa.me/26774534094" target="_blank" class="social-btn" title="WhatsApp">💬</a>
+        <a href="tel:+26773602034" class="social-btn" title="Call">📞</a>
       </div>
     </div>
-    <div class="about-text">
-      <div class="section-eyebrow">About Me</div>
-      <h2 class="section-title">Developer. Builder.<br>Problem Solver.</h2>
-      <p>I'm <strong>Taolo Wetshootsile</strong>, a web and app developer based in Gaborone. I started CrossDev to give Botswana businesses access to the same quality of digital presence that international companies have — without the international price tag.</p>
-      <p>I've worked with <strong>Vipre Security BW</strong>, building their full company website, and have delivered projects for clients across Botswana. I recently completed my BSc in ICT and am awaiting graduation.</p>
-      <p>When I'm not coding, I'm building products like <strong>Bookit BW</strong> — a local services booking platform designed for Botswana.</p>
-      <div class="skills-list">
-        <span class="skill-tag">HTML / CSS</span>
-        <span class="skill-tag">JavaScript</span>
-        <span class="skill-tag">React</span>
-        <span class="skill-tag">Node.js</span>
-        <span class="skill-tag">Android / Mobile Apps</span>
-        <span class="skill-tag">C# Systems</span>
-        <span class="skill-tag">Management Systems</span>
-        <span class="skill-tag">UI/UX Design</span>
-        <span class="skill-tag">Responsive Design</span>
-        <span class="skill-tag">Database Design</span>
-        <span class="skill-tag">SEO Basics</span>
+
+    <!-- RIGHT SIDE HERO CONTENT CARD -->
+    <div class="main-intro-card">
+      <div class="status-tag">
+        <span class="status-dot"></span> Available for freelancing & full-time roles
+      </div>
+      <h1 class="hero-title">
+        Building high-performance digital products with pixel-perfect precision.
+      </h1>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Let's Talk ↓</a>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- Projects -->
+    <!-- CLIENTS / BRANDING LOGO MARQUEE -->
+    <div class="trusted-card">
+      <span class="trusted-title">Companies & Clients I've Worked With</span>
+      
+      <div class="marquee-wrapper">
+        <div class="marquee-track">
+          <!-- Set 1 -->
+          <div class="marquee-item"><img src="images/logos/vipre-logo.png" alt="Vipre Security BW" onerror="this.src='https://via.placeholder.com/120x35/ffffff/000000?text=VIPRE+SECURITY'"></div>
+          <div class="marquee-item"><img src="images/logos/bookit-logo.png" alt="Bookit BW" onerror="this.src='https://via.placeholder.com/120x35/ffffff/000000?text=BOOKIT+BW'"></div>
+          <div class="marquee-item"><img src="images/logos/ub-logo.png" alt="UB Nursing" onerror="this.src='https://via.placeholder.com/120x35/ffffff/000000?text=UB+NURSING'"></div>
+          
+          <!-- Set 2 -->
+          <div class="marquee-item"><img src="images/logos/vipre-logo.png" alt="Vipre Security BW" onerror="this.src='https://via.placeholder.com/120x35/ffffff/000000?text=VIPRE+SECURITY'"></div>
+          <div class="marquee-item"><img src="images/logos/bookit-logo.png" alt="Bookit BW" onerror="this.src='https://via.placeholder.com/120x35/ffffff/000000?text=BOOKIT+BW'"></div>
+          <div class="marquee-item"><img src="images/logos/ub-logo.png" alt="UB Nursing" onerror="this.src='https://via.placeholder.com/120x35/ffffff/000000?text=UB+NURSING'"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- WORKS & PROJECTS SECTION -->
 <section id="projects">
-  <div class="reveal">
-    <div class="section-eyebrow">Portfolio</div>
-    <h2 class="section-title">Featured Work</h2>
-    <p class="section-sub">Real projects built for real clients.</p>
+  <div class="section-header">
+    <h2 class="section-title">Works & Interactive Demos</h2>
+    <p class="section-sub">A showcase of deployed client systems and high-performance interactive web concepts.</p>
   </div>
-  <div class="projects-grid reveal">
 
-    <div class="project-card">
+  <div class="filter-tabs">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="client-work">Client Work</button>
+    <button class="filter-btn" data-filter="interactive-demos">Interactive Demos</button>
+    <button class="filter-btn" data-filter="systems-apps">Systems & Apps</button>
+  </div>
+
+  <div class="projects-grid">
+    
+    <!-- LIVE CLIENT WORK 1 -->
+    <div class="project-card" data-category="client-work">
       <div class="project-img-wrap">
-        <img class="project-img" src="images/contact-hero.jpeg" alt="Vipre Security"
-             onerror="this.src='https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=600&q=80'">
-        <span class="project-tag">Live Project</span>
+        <img src="images/contact-hero.jpeg" alt="Vipre Security BW" onerror="this.src='https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=600&q=80'">
+        <span class="project-tag">Live Client Work</span>
       </div>
-      <div class="project-body">
+      <div class="project-info">
+        <div class="project-category">Corporate Website</div>
         <h3>Vipre Security BW</h3>
-        <p>Full company website for a Botswana-based security firm. Service showcase, contact forms, and professional branding.</p>
+        <p>Full corporate portal for a premier Botswana security firm featuring dynamic service showcases and quote requests.</p>
         <div class="project-footer">
           <div class="tech-stack"><span class="tech-pill">HTML</span><span class="tech-pill">CSS</span><span class="tech-pill">JS</span></div>
           <a href="https://www.vipresecurity.co.bw/" target="_blank" class="project-link">Visit Site →</a>
@@ -128,14 +110,16 @@
       </div>
     </div>
 
-    <div class="project-card">
+    <!-- LIVE CLIENT WORK 2 -->
+    <div class="project-card" data-category="client-work systems-apps">
       <div class="project-img-wrap">
-        <img class="project-img" src="data:image/webp;base64,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" alt="Nursing Students">
-        <span class="project-tag">HIV &amp; AIDS Adherence</span>
+        <img src="https://lawsociety.org.bw/wp-content/uploads/2024/11/ub-2.jpg" alt="Nursing Students Platform">
+        <span class="project-tag">Academic Portal</span>
       </div>
-      <div class="project-body">
-        <h3>Nursing Students Platform</h3>
-        <p>A custom website for nursing students to showcase academic resources and improve accessibility.</p>
+      <div class="project-info">
+        <div class="project-category">Health & Resource Hub</div>
+        <h3>UB Nursing Platform</h3>
+        <p>Custom academic platform designed for nursing students to access adherence materials and study frameworks.</p>
         <div class="project-footer">
           <div class="tech-stack"><span class="tech-pill">HTML</span><span class="tech-pill">CSS</span><span class="tech-pill">JS</span></div>
           <a href="https://wetshootsile21.github.io/HIV-AIDS/" target="_blank" class="project-link">Visit Site →</a>
@@ -143,31 +127,53 @@
       </div>
     </div>
 
-    <div class="project-card">
+    <!-- LIVE DEMO CONCEPT (SAVANLUX) -->
+    <div class="project-card" data-category="interactive-demos">
       <div class="project-img-wrap">
-        <div style="height:220px;background:linear-gradient(135deg,#0D1B3E 0%,#1A56DB 100%);display:flex;align-items:center;justify-content:center;font-size:40px;">🔧</div>
-        <span class="project-tag">Live Project</span>
+        <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&q=80" alt="SavanLux Safari Booking Engine">
+        <span class="project-tag demo-tag">Live Demo</span>
       </div>
-      <div class="project-body">
-        <h3>Bookit BW</h3>
-        <p>A local services booking platform for Botswana — connecting customers with verified plumbers, electricians, cleaners and more across Gaborone.</p>
+      <div class="project-info">
+        <div class="project-category">Tourism Concept</div>
+        <h3>SavanLux Safari & Lodge Platform</h3>
+        <p>A multi-page reservation concept tailored for Botswana safari lodges featuring instant filters, accommodations drawer, and booking engine.</p>
         <div class="project-footer">
-          <div class="tech-stack"><span class="tech-pill">HTML</span><span class="tech-pill">CSS</span><span class="tech-pill">JS</span></div>
-          <a href="#contact" class="project-link">View Project →</a>
+          <div class="tech-stack"><span class="tech-pill">Vanilla JS</span><span class="tech-pill">CSS Grid</span></div>
+          <a href="https://wetshootsile21.github.io/SavanLux_Luxury_Safari/" target="_blank" class="project-link">View Live Demo →</a>
         </div>
       </div>
     </div>
 
-    <div class="project-card" style="border-style:dashed;opacity:0.5;">
+    <!-- LOCKED DEMO CONCEPT 2 -->
+    <div class="project-card" data-category="interactive-demos systems-apps">
       <div class="project-img-wrap">
-        <div style="height:220px;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:40px;">🚧</div>
+        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80" alt="Local Service Directory">
+        <span class="project-tag locked-tag">🔒 Demo Locked</span>
       </div>
-      <div class="project-body">
-        <h3>Next Project</h3>
-        <p>Working on something new — or reach out to be my next featured client.</p>
+      <div class="project-info">
+        <div class="project-category">Platform Concept</div>
+        <h3>Bookit BW Service Portal</h3>
+        <p>Concept design for a local directory connecting customers with verified trade workers, cleaners, and contractors.</p>
         <div class="project-footer">
-          <div class="tech-stack"><span class="tech-pill">Coming Soon</span></div>
-          <a href="#contact" class="project-link">Let's Build →</a>
+          <div class="tech-stack"><span class="tech-pill">HTML5</span><span class="tech-pill">UI/UX</span></div>
+          <a href="#" class="project-link locked-link" onclick="openLockedModal(event, 'Bookit BW Service Portal')">Request Access 🔒</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOCKED DEMO CONCEPT 3 -->
+    <div class="project-card" data-category="interactive-demos systems-apps">
+      <div class="project-img-wrap">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="Fleet & Security Analytics Dashboard">
+        <span class="project-tag locked-tag">🔒 Demo Locked</span>
+      </div>
+      <div class="project-info">
+        <div class="project-category">Dashboard UI</div>
+        <h3>Security Fleet Command UI</h3>
+        <p>Dark-theme administrative dashboard UI designed for monitoring real-time logistics, logs, and client dispatch tickets.</p>
+        <div class="project-footer">
+          <div class="tech-stack"><span class="tech-pill">CSS Flex</span><span class="tech-pill">JS Charts</span></div>
+          <a href="#" class="project-link locked-link" onclick="openLockedModal(event, 'Security Fleet Command UI')">Request Access 🔒</a>
         </div>
       </div>
     </div>
@@ -175,249 +181,137 @@
   </div>
 </section>
 
-<!-- Process Section -->
-<section id="process">
-  <div class="reveal">
-    <div class="section-eyebrow">The Process</div>
-    <h2 class="section-title">How We Work Together</h2>
-    <p class="section-sub">A simple, transparent journey from your initial idea to a live digital product.</p>
-  </div>
-  
-  <div class="process-grid reveal">
-    <div class="process-card">
-      <div class="step-num">01</div>
-      <h3>Discovery & Quote</h3>
-      <p>We discuss your business goals, target audience, and exactly what features you need. You get a transparent quote and timeline.</p>
-    </div>
-
-    <div class="process-card">
-      <div class="step-num">02</div>
-      <h3>Design & Development</h3>
-      <p>I build your product using modern, fast technologies. You will receive updates and preview links to provide feedback along the way.</p>
-    </div>
-
-    <div class="process-card">
-      <div class="step-num">03</div>
-      <h3>Testing & Launch</h3>
-      <p>We rigorously test the site on all devices to ensure it works perfectly. Then, we launch it to the world.</p>
-    </div>
-
-    <div class="process-card">
-      <div class="step-num">04</div>
-      <h3>Post-Launch Support</h3>
-      <p>Even after launch, I'm here to help with maintenance, updates, and ensuring your digital presence stays secure.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Services -->
+<!-- SERVICES SECTION -->
 <section id="services">
-  <div class="reveal">
-    <div class="section-eyebrow">Pricing</div>
+  <div class="section-header">
     <h2 class="section-title">Services & Packages</h2>
     <p class="section-sub">Transparent pricing for Botswana businesses. Every package includes mobile-responsive design and post-launch support.</p>
   </div>
-  <div class="services-grid reveal">
 
+  <div class="services-grid">
     <div class="service-card">
-      <!-- Globe Icon -->
-      <svg class="service-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+      <span class="service-icon">🌐</span>
       <h3>Static Website</h3>
       <ul class="service-features">
-        <li class="best-for">Portfolios & Landing Pages</li>
-        <li>Up to 5 pages</li><li>Mobile responsive</li><li>Fast loading</li><li>Contact form</li><li>Basic SEO</li>
+        <li>Up to 5 pages</li>
+        <li>Mobile responsive</li>
+        <li>Fast loading</li>
+        <li>Contact form & SEO</li>
       </ul>
       <div class="service-price">P5,000 <span>once-off</span></div>
-      <a href="#contact" class="btn-service">Get Started →</a>
     </div>
 
     <div class="service-card featured">
       <span class="featured-badge">Most Popular</span>
-      <!-- Lightning Icon -->
-      <svg class="service-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+      <span class="service-icon">⚡</span>
       <h3>Dynamic Website</h3>
       <ul class="service-features">
-        <li class="best-for">Growing Service Businesses</li>
-        <li>CMS</li><li>Database integration</li><li>Interactive forms</li><li>Search functionality</li><li>E-commerce ready</li><li>Admin dashboard</li>
+        <li>CMS & Database integration</li>
+        <li>Interactive forms</li>
+        <li>E-commerce ready</li>
+        <li>Admin dashboard</li>
       </ul>
       <div class="service-price">P10,000 <span>once-off</span></div>
-      <a href="#contact" class="btn-service">Get Started →</a>
     </div>
 
     <div class="service-card">
-      <!-- Cart Icon -->
-      <svg class="service-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-      <h3>E-Commerce Store</h3>
-      <ul class="service-features">
-        <li class="best-for">Online Retail Shops</li>
-        <li>Product catalog</li><li>Payment gateway</li><li>Inventory management</li><li>Order tracking</li><li>Customer reviews</li>
-      </ul>
-      <div class="service-price">P15,000 <span>once-off</span></div>
-      <a href="#contact" class="btn-service">Get Started →</a>
-    </div>
-
-    <div class="service-card">
-      <!-- Wrench Icon -->
-      <svg class="service-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
-      <h3>Custom Web App</h3>
-      <ul class="service-features">
-        <li class="best-for">Unique Digital Platforms</li>
-        <li>Fully tailor-made</li><li>Role-based access</li><li>API integrations</li><li>Scalable architecture</li><li>AI features available</li>
-      </ul>
-      <div class="service-price">P15k–P30k <span>quote-based</span></div>
-      <a href="#contact" class="btn-service">Request Quote →</a>
-    </div>
-
-    <div class="service-card">
-      <!-- Mobile Icon -->
-      <svg class="service-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+      <span class="service-icon">📱</span>
       <h3>Mobile App</h3>
       <ul class="service-features">
-        <li class="best-for">Customer Engagement</li>
-        <li>Android development</li><li>Clean modern UI</li><li>Offline capability</li><li>Push notifications</li><li>Backend integration</li>
+        <li>Android development</li>
+        <li>Clean modern UI</li>
+        <li>Offline capability</li>
+        <li>Push notifications</li>
       </ul>
-      <div class="service-price">P20k–P40k <span>quote-based</span></div>
-      <a href="#contact" class="btn-service">Request Quote →</a>
+      <div class="service-price">P20k–P40k <span>quote</span></div>
     </div>
 
     <div class="service-card">
-      <!-- Desktop/Monitor Icon -->
-      <svg class="service-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+      <span class="service-icon">🖥️</span>
       <h3>Management System</h3>
       <ul class="service-features">
-        <li class="best-for">Internal Operations</li>
-        <li>Custom business software</li><li>Built with C# / Web</li><li>Database management</li><li>Role-based access</li><li>Reporting & dashboards</li>
+        <li>Custom business software</li>
+        <li>C# / Web interface</li>
+        <li>Database management</li>
+        <li>Role-based access</li>
       </ul>
-      <div class="service-price">P15k–P35k <span>quote-based</span></div>
-      <a href="#contact" class="btn-service">Request Quote →</a>
+      <div class="service-price">P15k–P35k <span>quote</span></div>
     </div>
-
   </div>
 </section>
 
-<!-- Contact -->
+<!-- CALL TO ACTION BENTO CARD -->
 <section id="contact">
-  <div class="reveal">
-    <div class="section-eyebrow">Contact</div>
-    <h2 class="section-title">Let's Build<br>Something Together</h2>
-  </div>
-  <div class="contact-wrap reveal">
-    <div class="contact-info">
-      <p>Based in Gaborone and ready to work with businesses across Botswana. I'll get back to you within 24 hours.</p>
-      <div class="contact-links">
-        <a href="mailto:twetshootsile21@gmail.com" class="contact-link cl-email">
-          <div class="contact-link-icon">✉️</div>
-          <div class="contact-link-text"><small>Email</small><strong>twetshootsile21@gmail.com</strong></div>
-        </a>
-        <a href="https://wa.me/26773602034" target="_blank" class="contact-link cl-wa">
-          <div class="contact-link-icon">💬</div>
-          <div class="contact-link-text"><small>WhatsApp</small><strong>+267 73 602 034</strong></div>
-        </a>
-        <a href="tel:+26773602034" class="contact-link cl-phone">
-          <div class="contact-link-icon">📞</div>
-          <div class="contact-link-text"><small>Call</small><strong>+267 73 602 034</strong></div>
-        </a>
-      </div>
-    </div>
-    <form class="contact-form" id="contactForm">
-      <div class="form-row">
-        <div class="form-group"><label>Your Name</label><input type="text" id="name" placeholder="e.g. Keabetswe Moyo" required></div>
-        <div class="form-group"><label>Email Address</label><input type="email" id="email" placeholder="you@company.com" required></div>
-      </div>
-      <div class="form-group">
-        <label>Service Needed</label>
-        <select id="service">
-          <option value="">Select a package...</option>
-          <option>Static Website — P5,000</option>
-          <option>Dynamic Website — P10,000</option>
-          <option>E-Commerce Store — P15,000</option>
-          <option>Custom Web App — Quote</option>
-          <option>I'm not sure yet</option>
-        </select>
-      </div>
-      <div class="form-group"><label>Tell me about your project</label><textarea id="message" placeholder="What does your business do? What do you need built?" required></textarea></div>
-      <button type="submit" class="btn-submit">Send Message →</button>
-    </form>
+  <div class="cta-card">
+    <h2>Are You Ready to kickstart your project with a touch of magic?</h2>
+    <p>Reach out and let's make it happen. Available for full-time or part-time opportunities to push boundaries and deliver exceptional work.</p>
+    <a href="https://wa.me/26774534094" target="_blank" class="btn-primary">Let's Talk →</a>
   </div>
 </section>
 
 <footer>
-  <div class="footer-logo">Cross<span>Dev</span></div>
-  <p>© 2026 CrossDev by Taolo Wetshootsile · Gaborone, Botswana</p>
-  <p>Built with 🤍 in Botswana</p>
+  <div>© 2026 CrossDev by Taolo Wetshootsile</div>
+  <div>Built with 🤍 in Gaborone, Botswana</div>
 </footer>
 
-<a href="https://wa.me/26773602034" class="whatsapp-float" target="_blank">💬</a>
+<a href="https://wa.me/26774534094" class="whatsapp-float" target="_blank">💬</a>
+
+<!-- LOCKED DEMO MODAL POPUP -->
+<div class="modal-overlay" id="lockedModal">
+  <div class="modal-card">
+    <button class="modal-close" onclick="closeLockedModal()">&times;</button>
+    <div class="modal-icon">🔒</div>
+    <h3 id="modalProjectTitle">Private Project Demo</h3>
+    <p>This prototype demo is currently restricted for private client reviews. Contact me on WhatsApp to request live demo preview access.</p>
+    <div class="modal-actions">
+      <a href="#" id="modalWaBtn" target="_blank" class="btn-primary">Request Access via WhatsApp →</a>
+    </div>
+  </div>
+</div>
 
 <script>
-/* ── CURSOR ── */
-const cur = document.getElementById('cursor');
-const ring = document.getElementById('cursorRing');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
-(function loop(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop);})();
-document.querySelectorAll('a,button,.skill-tag').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{ring.style.width='54px';ring.style.height='54px';});
-  el.addEventListener('mouseleave',()=>{ring.style.width='36px';ring.style.height='36px';});
-});
+  // --- FILTER TABS INTERACTIVITY ---
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.project-card');
 
-/* ── MOBILE DRAWER ── */
-const btn      = document.getElementById('hamburger');
-const drawer   = document.getElementById('mobDrawer');
-const overlay  = document.getElementById('mobOverlay');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Remove active class from all
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
 
-function openDrawer(){
-  drawer.classList.add('open');
-  overlay.classList.add('open');
-  btn.classList.add('open');
-  btn.setAttribute('aria-expanded','true');
-  document.body.style.overflow='hidden';
-}
-function closeDrawer(){
-  drawer.classList.remove('open');
-  overlay.classList.remove('open');
-  btn.classList.remove('open');
-  btn.setAttribute('aria-expanded','false');
-  document.body.style.overflow='';
-}
+      const filterValue = btn.getAttribute('data-filter');
 
-btn.addEventListener('click', e=>{
-  e.stopPropagation();
-  drawer.classList.contains('open') ? closeDrawer() : openDrawer();
-});
-
-overlay.addEventListener('click', closeDrawer);
-
-['lnk1','lnk2','lnk3','lnk4','lnk5'].forEach(id=>{
-  const el = document.getElementById(id);
-  if(el) {
-    el.addEventListener('click', e=>{
-      e.stopPropagation();
-      closeDrawer();
+      projectCards.forEach(card => {
+        const categories = card.getAttribute('data-category').split(' ');
+        if (filterValue === 'all' || categories.includes(filterValue)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
     });
-  }
-});
-
-document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeDrawer(); });
-
-/* ── SCROLL REVEAL ── */
-const io = new IntersectionObserver(entries=>{
-  entries.forEach((en,i)=>{
-    if(en.isIntersecting){ setTimeout(()=>en.target.classList.add('visible'),i*80); io.unobserve(en.target); }
   });
-},{threshold:0.1});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-/* ── CONTACT → WHATSAPP ── */
-document.getElementById('contactForm').addEventListener('submit',e=>{
-  e.preventDefault();
-  const n=document.getElementById('name').value;
-  const em=document.getElementById('email').value;
-  const sv=document.getElementById('service').value||'Not specified';
-  const ms=document.getElementById('message').value;
-  const t=`Hi Taolo! I found your CrossDev portfolio.%0A%0AName: ${encodeURIComponent(n)}%0AEmail: ${encodeURIComponent(em)}%0AService: ${encodeURIComponent(sv)}%0A%0A${encodeURIComponent(ms)}`;
-  window.open(`https://wa.me/26773602034?text=${t}`,'_blank');
-});
+  // --- LOCKED DEMO MODAL INTERACTIVITY ---
+  function openLockedModal(e, projectName) {
+    e.preventDefault();
+    document.getElementById('modalProjectTitle').innerText = projectName + " (Locked Demo)";
+    const waText = encodeURIComponent(`Hi Taolo, I would like to request demo access for: ${projectName}`);
+    document.getElementById('modalWaBtn').href = `https://wa.me/26774534094?text=${waText}`;
+    document.getElementById('lockedModal').classList.add('active');
+  }
+
+  function closeLockedModal() {
+    document.getElementById('lockedModal').classList.remove('active');
+  }
+
+  document.getElementById('lockedModal').addEventListener('click', (e) => {
+    if (e.target.id === 'lockedModal') {
+      closeLockedModal();
+    }
+  });
 </script>
+
 </body>
 </html>
